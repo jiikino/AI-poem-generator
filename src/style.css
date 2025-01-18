@@ -28,7 +28,7 @@ header {
 form {
     padding: 30px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 30px;
     display:flex;
     box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
     margin-bottom: 30px;
@@ -36,11 +36,13 @@ form {
 }
 .instructions{
     padding: 16px;
-    border-radius: 5px;
+    border-radius: 50px;
     width: 80%;
     border: 1px solid rgba(39, 33, 66, 0.5);
     line-height: 20px; 
     font-size: 16px;
+    line-height: 20px;
+    color: #272044;
     
 }
 
