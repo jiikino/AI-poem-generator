@@ -1,105 +1,171 @@
 body {
-    background: linear-gradient(135deg, #ffd1dc, #e6e6fa, #b5eaea);
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #fff5f5;
     margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
+    color: #ff6b9d;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(255, 107, 157, 0.2);
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
     text-align: center;
+    border: 3px solid #ffc2d1;
+    position: relative;
+    overflow: hidden;
 }
 
-header h1 {
-    color: #4a4a4a;
-    font-size: 3rem;
-    margin-bottom: 40px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+h1 {
+    color: #ff6b9d;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
 }
 
-#poem-generator {
-    margin-bottom: 30px;
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
 }
 
 .instructions {
-    width: 80%;
-    max-width: 400px;
-    padding: 15px;
-    border: none;
-    border-radius: 25px;
-    font-size: 1.1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.instructions:focus {
-    outline: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ffc2d1;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #ff6b9d;
+    background-color: #fff;
+    margin-bottom: 15px;
 }
 
 .submit-button {
-    background-color: #ff8fab;
+    background-color: #ff6b9d;
     color: white;
     border: none;
-    padding: 15px 30px;
-    border-radius: 25px;
-    font-size: 1.1rem;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
     cursor: pointer;
-    margin-left: 10px;
-    transition: all 0.3s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(255, 107, 157, 0.3);
 }
 
 .submit-button:hover {
-    background-color: #ff7096;
-    transform: translateY(-2px);
+    background-color: #ff4b8d;
+    transform: scale(1.05);
 }
 
 .poem {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 30px;
+    background-color: #fffaf0;
     border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 600px;
-    min-height: 200px;
+    padding: 20px;
+    margin-top: 30px;
+    white-space: pre-line;
+    font-size: 1.1rem;
     line-height: 1.6;
-    font-size: 1.2rem;
-    color: #333;
+    text-align: center;
+    color: #ff6b9d;
+    border: 2px dotted #ffc2d1;
+    display: none;
+}
+
+.kawaii-decoration {
+    position: absolute;
+    font-size: 1.5rem;
+}
+
+#cloud1 {
+    top: 20px;
+    left: 20px;
+    transform: rotate(-10deg);
+}
+
+#cloud2 {
+    bottom: 20px;
+    right: 20px;
+    transform: rotate(10deg);
+}
+
+#star1 {
+    top: 30px;
+    right: 40px;
+}
+
+#star2 {
+    bottom: 30px;
+    left: 40px;
+}
+
+.loading {
+    display: none;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ff6b9d;
+    margin: 0 5px;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 footer {
-    margin-top: 40px;
-    padding: 20px;
-    color: #666;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #ff9db5;
 }
 
 footer a {
-    color: #ff8fab;
+    color: #ff6b9d;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #ff7096;
+    color: #ff4b8d;
 }
 
 @media (max-width: 600px) {
-    .instructions {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    
-    .submit-button {
-        width: 100%;
-        margin-left: 0;
-    }
-    
     .container {
-        padding: 10px;
+        width: 95%;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
     }
 }
 

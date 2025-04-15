@@ -24,10 +24,25 @@ function generatePoem(event){
     console.log(`prompt: ${prompt}`);
     console.log(`context: ${context}`);
 
+    const loadingDiv = document.getElementById('loading');
+    const poemBox = document.getElementById('poem-box');
 
-    axios.get(apiURL).then(displayPoem);
+    // Show loading animation before generating poem
+    function showLoading() {
+        loadingDiv.style.display = 'block';
+        poemBox.style.display = 'none';
+    }
 
+    // Hide loading animation after poem is generated
+    function hideLoading() {
+        loadingDiv.style.display = 'none';
+        poemBox.style.display = 'block';
+    }
 
+    // Call showLoading() before making the API call
+    showLoading();
+
+    axios.get(apiURL).then(displayPoem).finally(hideLoading);
 
 } 
 
