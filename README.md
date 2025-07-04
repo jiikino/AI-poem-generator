@@ -62,14 +62,6 @@ Contributions are welcome! If you'd like to contribute to this project:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Thanks to all contributors who have helped improve this project
-- Special thanks to the open-source community for the amazing tools and libraries
 
 ## Author
 
